@@ -1,15 +1,15 @@
 {
-  "name": "rxjs-learning",
+  "name": "makeupbeauty",
   "version": "1.0.0",
-  "description": "",
+  "description": "Makeup beauty page with React",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
     "serve": "webpack-dev-server"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["HTML5", "CSS", "Reactjs","Webpack"],
+  "author": "Naveen Kumar PG",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
