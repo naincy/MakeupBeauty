@@ -1,0 +1,25 @@
+.header{
+  background: #000;
+  color: #fff;
+  padding: 10px 0px;
+
+  a{
+    color: #fff;
+  }
+  ul{
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    
+    li{
+      display: inline;
+      padding: 0px 5px;
+
+      a{
+        padding: 10px 5px;
+      }
+    }
+
+  }
+}
+
