@@ -40,13 +40,13 @@ export default class Header extends Component{
   render(){
     return (
       <Fragment>
-        <header className="footer">
+        <footer className="footer">
           <div className="container">
             <ul className="container">
               {this.renderMenu()}
             </ul>
           </div>
-        </header>
+        </footer>
       </Fragment>
     );
   }

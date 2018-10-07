@@ -4,7 +4,7 @@ import './css/index.scss';
 export default class Header extends Component{
   constructor(props){
     super(props);
-    this.state ={
+    this.state = {
       data: []
     };
   }
@@ -42,7 +42,7 @@ export default class Header extends Component{
       <Fragment>
         <header className="header">
           <div className="container">
-            <div className="center">
+            <div className="center logo">
               <h2>Mekeup & Beauty</h2>
               <p className="legal">I am what i make up</p>
             </div>
