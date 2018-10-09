@@ -1,67 +1,43 @@
 [
   {
-    "picturefill": {
-      "mobile": "/public/images/carousel/carousel-1.jpg",
-      "desktop": "/public/images/carousel/carousel-1.jpg",
-      "tablet": "/public/images/carousel/carousel-1.jpg",
-      "alt": "Slide 1"
-    },
+    "image": "/public/images/carousel/carousel-1.jpg",
     "id": "1",
-    "type": "image",
+    "type": "video",
     "username": "@covergirl1"
   },
   {
-    "picturefill":{
-      "mobile": "/public/images/carousel/carousel-2.jpg",
-      "desktop": "/public/images/carousel/carousel-2.jpg",
-      "tablet": "/public/images/carousel/carousel-2.jpg",
-      "alt": "Slide 2"
-    },
+    "image": "/public/images/carousel/carousel-2.jpg",
     "id": "2",
-    "type": "video",
+    "type": "image",
     "username": "@covergirl2"
   },
   {
-    "picturefill":{
-      "mobile": "/public/images/carousel/carousel-3.jpg",
-      "desktop": "/public/images/carousel/carousel-3.jpg",
-      "tablet": "/public/images/carousel/carousel-3.jpg",
-      "alt": "Slide 3"
-    },
+    "image": "/public/images/carousel/carousel-3.jpg",
     "id": "3",
     "type": "image",
     "username": "@covergirl3"
   },
   {
-    "picturefill": {
-      "mobile": "/public/images/carousel/carousel-1.jpg",
-      "desktop": "/public/images/carousel/carousel-1.jpg",
-      "tablet": "/public/images/carousel/carousel-1.jpg",
-      "alt": "Slide 1"
-    },
-    "id": "1",
-    "type": "image",
+    "image": "/public/images/carousel/carousel-4.jpg",
+    "id": "4",
+    "type": "video",
     "username": "@covergirl1"
   },
   {
-    "picturefill":{
-      "mobile": "/public/images/carousel/carousel-2.jpg",
-      "desktop": "/public/images/carousel/carousel-2.jpg",
-      "tablet": "/public/images/carousel/carousel-2.jpg",
-      "alt": "Slide 2"
-    },
-    "id": "2",
+    "image": "/public/images/carousel/carousel-5.jpg",
+    "id": "5",
     "type": "video",
     "username": "@covergirl2"
   },
   {
-    "picturefill":{
-      "mobile": "/public/images/carousel/carousel-3.jpg",
-      "desktop": "/public/images/carousel/carousel-3.jpg",
-      "tablet": "/public/images/carousel/carousel-3.jpg",
-      "alt": "Slide 3"
-    },
-    "id": "3",
+    "image": "/public/images/carousel/carousel-6.jpg",
+    "id": "6",
+    "type": "image",
+    "username": "@covergirl3"
+  },
+  {
+    "image": "/public/images/carousel/carousel-7.jpg",
+    "id": "7",
     "type": "image",
     "username": "@covergirl3"
   }
