@@ -1,0 +1,68 @@
+[
+  {
+    "picturefill": {
+      "mobile": "/public/images/carousel/carousel-1.jpg",
+      "desktop": "/public/images/carousel/carousel-1.jpg",
+      "tablet": "/public/images/carousel/carousel-1.jpg",
+      "alt": "Slide 1"
+    },
+    "id": "1",
+    "type": "image",
+    "username": "@covergirl1"
+  },
+  {
+    "picturefill":{
+      "mobile": "/public/images/carousel/carousel-2.jpg",
+      "desktop": "/public/images/carousel/carousel-2.jpg",
+      "tablet": "/public/images/carousel/carousel-2.jpg",
+      "alt": "Slide 2"
+    },
+    "id": "2",
+    "type": "video",
+    "username": "@covergirl2"
+  },
+  {
+    "picturefill":{
+      "mobile": "/public/images/carousel/carousel-3.jpg",
+      "desktop": "/public/images/carousel/carousel-3.jpg",
+      "tablet": "/public/images/carousel/carousel-3.jpg",
+      "alt": "Slide 3"
+    },
+    "id": "3",
+    "type": "image",
+    "username": "@covergirl3"
+  },
+  {
+    "picturefill": {
+      "mobile": "/public/images/carousel/carousel-1.jpg",
+      "desktop": "/public/images/carousel/carousel-1.jpg",
+      "tablet": "/public/images/carousel/carousel-1.jpg",
+      "alt": "Slide 1"
+    },
+    "id": "1",
+    "type": "image",
+    "username": "@covergirl1"
+  },
+  {
+    "picturefill":{
+      "mobile": "/public/images/carousel/carousel-2.jpg",
+      "desktop": "/public/images/carousel/carousel-2.jpg",
+      "tablet": "/public/images/carousel/carousel-2.jpg",
+      "alt": "Slide 2"
+    },
+    "id": "2",
+    "type": "video",
+    "username": "@covergirl2"
+  },
+  {
+    "picturefill":{
+      "mobile": "/public/images/carousel/carousel-3.jpg",
+      "desktop": "/public/images/carousel/carousel-3.jpg",
+      "tablet": "/public/images/carousel/carousel-3.jpg",
+      "alt": "Slide 3"
+    },
+    "id": "3",
+    "type": "image",
+    "username": "@covergirl3"
+  }
+]

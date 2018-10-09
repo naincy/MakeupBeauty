@@ -7,6 +7,7 @@ import './globals/css/common.scss';
 import Header from './components/header/index';
 import Footer from './components/footer/index';
 import Herobanner from './components/herobanner/index';
+import TrendingNow from './components/trendingnow';
 
 export default class App  extends Component{
   render(){
@@ -14,6 +15,7 @@ export default class App  extends Component{
       <Fragment>
         <Header />
         <Herobanner />
+        <TrendingNow />
         <Footer />
       </Fragment>
 
