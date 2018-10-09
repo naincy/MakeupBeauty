@@ -1,10 +1,8 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import Picturefill  from '../../globals/js/picturefill';
 import CTA from '../../globals/js/cta';
 
 import './css/index.scss';
-
-
 
 export default class Herobanner extends Component{
   constructor(props){
