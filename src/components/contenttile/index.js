@@ -54,13 +54,15 @@ export default class Contenttile extends Component{
           </div>
           <div className="col-xs-12 col-md-6 col-md-pull-1">
             <div className="content-right col-xs-12">
-            <span className="card-flag h5 uppercase bold">{this.state.data.flagtitle}</span>
+              <div className="card-head">
+              <span className="card-flag">{this.state.data.flagtitle}</span>
               <a className="card-title" href="#">
                 <div className="card-content-box">
                   <h2 className="h1">{this.state.data.title}</h2>
                   <p className="card-description">{this.state.data.description}</p>
                 </div>
               </a>
+              </div>
             </div>
             <div className="col-md-offset-2 col-md-10 col-xs-12 hide-sm hide-xs">
               {this.pictureFill()}

@@ -1,23 +1,78 @@
 @import '../../../globals/css/breakpoints.scss';
 
-
+.contenttile {
+  .cardlayout {
+    font-family: "Proxima N W01 Smbd","Helvetica Neue",sans-serif;
+    .card-flag {
+      padding: 5px 15px;
+      top: -17px;
+      background-color: #ff4169;
+      color: #fff;
+      position: absolute;
+      margin-top: 0;
+      font-family: "Proxima N W01 Smbd","Helvetica Neue",sans-serif;
+      text-transform: uppercase;
+    }
+    .card-title {
+      color: #fff;
+    }
+  }
+}
 
 //Mobile
-@media (min-width: $screen-sm-min) {
+@media (max-width: $screen-xs-max) {
   .contenttile{
     .cardlayout{
       display: block;
       flex-direction: column;
       flex-grow: 1;
+      padding: 0;
       .content-left {
         padding: 0 5px;
+        float: left;
       }
       .col-md-pull-1 {
         margin-left: 0;
+        padding: 0 5px;
+        float: left;
+      }
+      .content-right {
+        transform: translateY(-20%);
+        text-align: center;
+        margin: 0 20px 0 0;
+        background-color: #000;
+        .card-head {
+          padding: 0 13px 25px;
+        }
+      }
+      .card-flag {
+        position: static;
+        transform: translateY(-50%);
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.25;
+      }
+      .card-title {
+        .card-content-box {
+          .h1 {
+            margin: 0 0 15px 0;
+            font-size: 26px;
+          }
+          .card-description {
+            font-size: 16px;
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
-
+  .hide-sm {
+    display: none;
+  }
+  .hide-xs {
+    display: none;
+  }
 }
 
 //tablet
@@ -33,7 +88,6 @@
     .cardlayout {
       display: flex;
       flex-direction: row;
-      font-family: "Proxima N W01 Smbd","Helvetica Neue",sans-serif;
       padding: 0;
       .content-left {
         padding: 0 0 0 10px;
@@ -51,18 +105,11 @@
         padding: 10px 19px;
         top: -21px;
         left: 49px;
-        background-color: #ff4169;
-        color: #fff;
-        position: absolute;
-        margin-top: 0;
-        font-family: "Proxima N W01 Smbd","Helvetica Neue",sans-serif;
-        text-transform: uppercase;
         font-size: 1.22222rem;
         line-height: 1.27273;
         font-weight: 700;
       }
       .card-title {
-        color: #fff;
         &::after {
           content: "";
           background-image: url(/public/images/contenttile/chevron_right_white.svg);
@@ -72,9 +119,9 @@
           -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-          right: 0;
-          width: 30px;
-          height: 30px;
+          right: 25px;
+          width: 40px;
+          height: 40px;
         }
         .card-content-box {
           text-align: left;
@@ -96,4 +143,13 @@
     }
   }
 
+}
+
+@media (min-width: $screen-lg-min) {
+  .hide-sm {
+    display: block;
+  }
+  .hide-xs {
+    display: block;
+  }
 }
