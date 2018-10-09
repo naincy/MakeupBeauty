@@ -11,7 +11,9 @@ export default class ImageCarousel extends Component {
     this.clickHandler = this.clickHandler.bind(this);
 
     this.state = {
-      data: []
+      data: {
+        slides: []
+      }
     };
   }
 
@@ -37,6 +39,7 @@ export default class ImageCarousel extends Component {
 
   render() {
     const settings = {
+      autoplay: this.state.data.autoplay,
       dots: false,
       infinite: true,
       speed: 500,
@@ -46,11 +49,11 @@ export default class ImageCarousel extends Component {
     };
 
     return (
-      this.state.data.length ? 
+      this.state.data.slides.length ? 
         <section className="image-carousel-wrapper">
           <Slider {...settings}>
             {
-              this.state.data.map(item => {
+              this.state.data.slides.map(item => {
                 const imgStyle = {
                   backgroundImage: 'url(' + item.image + ')'
                 };
