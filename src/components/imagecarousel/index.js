@@ -50,16 +50,21 @@ export default class ImageCarousel extends Component {
         <section className="image-carousel-wrapper">
           <Slider {...settings}>
             {
-              this.state.data.map(item => 
-                <div className="slide" key={item.id}>
-                  <Picturefill data={item.picturefill} />
+              this.state.data.map(item => {
+                const imgStyle = {
+                  backgroundImage: 'url(' + item.image + ')'
+                };
+
+                return <div className="slide" key={ item.id } data-image={item.image}>
+                  <div className="slide-image" style={imgStyle}></div>
                   <div className="slide-content">
                     <span className={item.type}>
                       <i></i>
                     </span>
                     <span className="username">{item.username}</span>
                   </div>
-                </div>
+                </div>;
+              }
               )
             }
           </Slider>

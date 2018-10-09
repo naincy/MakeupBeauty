@@ -34,6 +34,11 @@
     height: auto;
     align-items: center;
     position: relative;
+    width: 240px;
+    height: 250px;
+    &>div {
+      width: 100%;
+    }
     &:hover {
       .slide {
         .slide-content {
@@ -46,8 +51,19 @@
   }
   .slide {
     cursor: pointer;
+    width: 240px;
+    height: 250px;
+    float: left;
     &:focus {
       outline: 0;
+    }
+    .slide-image {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
     .slide-content {
       position: absolute;
@@ -90,6 +106,10 @@
     width: 308px;
     img {
       width: 208px;
+    }
+    .slick-slide, .slide {
+      width: 208px;
+      height: 208px;
     }
     .slick-next {
       right: -50px;
