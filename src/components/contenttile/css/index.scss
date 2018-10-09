@@ -1,0 +1,99 @@
+@import '../../../globals/css/breakpoints.scss';
+
+
+
+//Mobile
+@media (min-width: $screen-sm-min) {
+  .contenttile{
+    .cardlayout{
+      display: block;
+      flex-direction: column;
+      flex-grow: 1;
+      .content-left {
+        padding: 0 5px;
+      }
+      .col-md-pull-1 {
+        margin-left: 0;
+      }
+    }
+  }
+
+}
+
+//tablet
+//desktop
+@media (min-width: $screen-lg-min), (min-width: $screen-sm-min) {
+  
+  .contenttile {
+    &.spacer-top-bottom {
+      padding-top: 60px;
+      padding-bottom: 30px;
+      margin-bottom: 0;
+    }
+    .cardlayout {
+      display: flex;
+      flex-direction: row;
+      font-family: "Proxima N W01 Smbd","Helvetica Neue",sans-serif;
+      padding: 0;
+      .content-left {
+        padding: 0 0 0 10px;
+      }
+      .col-md-pull-1 {
+        margin-left:-8.33333333%;
+        right: 0;
+      }
+      .content-right {
+        padding: 23px 20px 35px 46px;
+        margin: 40px 0 0;
+        background-color: #000;
+      }
+      .card-flag {
+        padding: 10px 19px;
+        top: -21px;
+        left: 49px;
+        background-color: #ff4169;
+        color: #fff;
+        position: absolute;
+        margin-top: 0;
+        font-family: "Proxima N W01 Smbd","Helvetica Neue",sans-serif;
+        text-transform: uppercase;
+        font-size: 1.22222rem;
+        line-height: 1.27273;
+        font-weight: 700;
+      }
+      .card-title {
+        color: #fff;
+        &::after {
+          content: "";
+          background-image: url(/public/images/contenttile/chevron_right_white.svg);
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          right: 0;
+          width: 30px;
+          height: 30px;
+        }
+        .card-content-box {
+          text-align: left;
+          padding-left: 0;
+          padding-right: 0;
+          .h1 {
+            margin: 15px 0;
+            padding-right: 80px;
+            font-size: 3.33333rem;
+            line-height: 1;
+          }
+          .card-description {
+            font-size: 1rem;
+            line-height: 1.55556;
+            margin: 0 15px 0 0;
+          }
+        }
+      }
+    }
+  }
+
+}
