@@ -4,7 +4,7 @@
   max-width: 100%;
   img {
     width: 240px;
-    height: 250px;
+    max-height: 100%;
   }
   .slick-prev {
     left: -65px;
@@ -26,8 +26,25 @@
       line-height: 0;
     }
   }
-  .slide {
+  .slick-track {
+    display: flex;
+  }
+  .slick-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
     position: relative;
+    &:hover {
+      .slide {
+        .slide-content {
+          .username {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .slide {
     cursor: pointer;
     &:focus {
       outline: 0;
@@ -64,13 +81,6 @@
         background-color: rgba(255, 65, 105, 0.6);
       }
     }
-    &:hover {
-      .slide-content {
-        .username {
-          display: block;
-        }
-      }
-    }
   }
 }
 
@@ -80,7 +90,6 @@
     width: 308px;
     img {
       width: 208px;
-      height: 208px;
     }
     .slick-next {
       right: -50px;
