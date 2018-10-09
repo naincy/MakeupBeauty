@@ -8,6 +8,7 @@ import Header from './components/header/index';
 import Footer from './components/footer/index';
 import Herobanner from './components/herobanner/index';
 import TrendingNow from './components/trendingnow';
+import Products from './components/products/index';
 
 export default class App  extends Component{
   render(){
@@ -16,6 +17,7 @@ export default class App  extends Component{
         <Header />
         <Herobanner />
         <TrendingNow />
+        <Products />
         <Footer />
       </Fragment>
 
