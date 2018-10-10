@@ -24,8 +24,6 @@ export default class Header extends Component{
   }
 
   subnav(items){
-    console.log(items);
-
     if (items){
       let HTML  = items.map((item, i) => {
         return <li key={i}>
@@ -36,17 +34,19 @@ export default class Header extends Component{
       return HTML;
     }
 
-    return '';
-    
+    return '';    
   }
 
   ischevron(items){
-    
     if (items){
       return <i className="glyphicon chevron"></i>;
     }
 
     return '';
+  }
+  
+  showsearch(){
+    console.log('search');
   }
 
   renderMenu(){
@@ -73,6 +73,7 @@ export default class Header extends Component{
           </div>
           <ul className="container navigation">
             {this.renderMenu()}
+            <li className="search" onClick={this.showsearch()}>Search</li>
           </ul>
         </div>
       </header>

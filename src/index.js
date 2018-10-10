@@ -17,9 +17,9 @@ export default class App  extends Component{
       <Fragment>
         <Header />
         <Herobanner />
+        <Products />
         <Contenttile />
         <TrendingNow />
-        <Products />
         <Footer />
       </Fragment>
 
