@@ -23,10 +23,40 @@ export default class Header extends Component{
    
   }
 
+  subnav(items){
+    console.log(items);
+
+    if (items){
+      let HTML  = items.map((item, i) => {
+        return <li key={i}>
+          <a href={item.link} title={item.title}>{item.label}</a>
+        </li>;
+      });
+  
+      return HTML;
+    }
+
+    return '';
+    
+  }
+
+  ischevron(items){
+    
+    if (items){
+      return <i className="glyphicon chevron"></i>;
+    }
+
+    return '';
+  }
+
   renderMenu(){
     let HTML  = this.state.data.map((item, i) => {
       return <li key={i}>
         <a href={item.link} title={item.title}>{item.label}</a>
+        {this.ischevron(item.subnav)}
+        <ul className="subnav">
+          {this.subnav(item.subnav)}
+        </ul>
       </li>;
     });
 
@@ -41,7 +71,7 @@ export default class Header extends Component{
             <h2>Mekeup & Beauty</h2>
             <p className="legal">I am what i make up</p>
           </div>
-          <ul className="container">
+          <ul className="container navigation">
             {this.renderMenu()}
           </ul>
         </div>
