@@ -1,8 +1,45 @@
 .products-component{
   .list__header{
     text-align: center;
+    padding-bottom: 20px;
     a{
       text-decoration: underline;
     }
+  }
+  .product-list{
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-content{
+    position: absolute;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .content-box{
+      margin: 15px;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 110px;
+      padding: 0;
+      position: relative;
+      background-color: #fff;
+      width: 100%;
+      color: #000;
+      h2{
+        padding: 25px;
+        margin: 0;
+      }
+      &:hover{
+        background-color: #000;
+        color: #fff;
+      }
+    }
+    
   }
 }

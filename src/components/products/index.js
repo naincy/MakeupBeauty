@@ -7,22 +7,75 @@ class Products extends Component {
   constructor(props){
     super(props);
     this.state = {
-      data: []
+      products: []
     }
+  }
+
+  renderProducts (){
+    if (this.state.products && this.state.products.products){
+      console.log(this.state.products.products);
+      return (  
+        this.state.products.products.map(product => {
+          return (
+            <div key={product.id} className="col-xs-4">
+              <article className="product-list">
+                <a href={product.productUrl}>
+                  <div className="active-img" onMouseOver={this.onHoverEvent()}>
+                    <picture>
+                      <source src={product.desktopActive} media="(min-width: 768px)"></source>
+                      <img src={product.mobileActive}></img>
+                    </picture>
+                  </div>
+                  <div className="hover-img hide">
+                    <picture>
+                      <source src={product.desktopHover} media="(min-width: 768px)"></source>
+                      <img src={product.mobileHover}></img>
+                    </picture>
+                  </div>
+                  <div className="card-content">
+                    <div className="content-box">
+                      <h2>{product.cardContent}</h2>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            </div>
+          )
+        })
+      )
+    } else {
+      return "";
+    }
+    
+  }
+
+  onHoverEvent (){
+    console.log('here')
+  }
+  componentDidMount(){
+    const productList = new Promise( (resolve, reject) => {
+      fetch('/public/json/products.json')
+      .then(data => data.json())
+      .then(data => resolve(data))
+      .catch(e => {
+        reject(e);
+      })
+    });
+    productList.then(products => {
+      this.setState({products: products})
+    })
   }
 
   render(){
     return(
-       <section className="products-component grid-container">
-          <div className="grid-row">
+       <section className="products-component container">
+          <div className="product-wrapper">
             <div className="list__header col-xs-12">
-              <h2>NEW PRODUCTS</h2>
-              <a className="prod-link">SEE ALL NEW ></a>
+              <h2>{this.state.products.title}</h2>
+              <a href={this.state.products.seeAllHref} className="prod-link">{this.state.products.seeAllLabel}</a>
             </div>
             <div className="prodict-list">
-              <div className="c-"></div>
-              <div></div>
-              <div></div>
+              {this.renderProducts()}
             </div>
           </div>
        </section>
