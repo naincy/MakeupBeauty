@@ -10,7 +10,28 @@
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
+
+    .image-wrapper .hoverimage, .image-wrapper:hover .activeimage{
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+    .image-wrapper:hover .hoverimage{
+      opacity: 1;
+      height: auto;
+      width: auto;
+    }
+    .activeimage{
+      opacity: 1;
+      transition: opacity 1s linear;
+    }
+    .hoverimage{
+      transition: opacity 1s linear;
+    }
+
   }
+
+
   .card-content{
     position: absolute;
     top: auto;
@@ -34,6 +55,7 @@
       h2{
         padding: 25px;
         margin: 0;
+        word-break: break-word;
       }
       &:hover{
         background-color: #000;

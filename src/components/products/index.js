@@ -17,20 +17,22 @@ class Products extends Component {
       return (  
         this.state.products.products.map(product => {
           return (
-            <div key={product.id} className="col-xs-4">
+            <div key={product.id} className="col-sm-4 col-xs-12">
               <article className="product-list">
                 <a href={product.productUrl}>
-                  <div className="active-img" onMouseOver={this.onHoverEvent()}>
-                    <picture>
-                      <source src={product.desktopActive} media="(min-width: 768px)"></source>
-                      <img src={product.mobileActive}></img>
-                    </picture>
-                  </div>
-                  <div className="hover-img hide">
-                    <picture>
-                      <source src={product.desktopHover} media="(min-width: 768px)"></source>
-                      <img src={product.mobileHover}></img>
-                    </picture>
+                  <div className="image-wrapper">
+                    <div className="activeimage">
+                      <picture>
+                        <source src={product.desktopActive} media="(min-width: 768px)"></source>
+                        <img src={product.mobileActive}></img>
+                      </picture>
+                    </div>
+                    <div className="hoverimage">
+                      <picture>
+                        <source src={product.desktopHover} media="(min-width: 768px)"></source>
+                        <img src={product.mobileHover}></img>
+                      </picture>
+                    </div>
                   </div>
                   <div className="card-content">
                     <div className="content-box">
@@ -49,9 +51,6 @@ class Products extends Component {
     
   }
 
-  onHoverEvent (){
-    console.log('here')
-  }
   componentDidMount(){
     const productList = new Promise( (resolve, reject) => {
       fetch('/public/json/products.json')
