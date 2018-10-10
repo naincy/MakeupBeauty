@@ -10,6 +10,7 @@ import Herobanner from './components/herobanner/index';
 import Contenttile from './components/contenttile/index';
 import TrendingNow from './components/trendingnow';
 import Products from './components/products/index';
+import ProductCarousel from './components/productcarousel/index';
 
 export default class App  extends Component{
   render(){
@@ -20,6 +21,7 @@ export default class App  extends Component{
         <Contenttile />
         <TrendingNow />
         <Products />
+        <ProductCarousel />
         <Footer />
       </Fragment>
 
