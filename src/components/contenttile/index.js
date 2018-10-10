@@ -48,24 +48,26 @@ export default class Contenttile extends Component{
 
     return (
       <section className="container contenttile spacer-top-bottom">
-        <div className="col-xs-12 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 cardlayout">
-          <div className="col-xs-12 col-md-7 content-left">
-            {this.pictureFillMain()}
-          </div>
-          <div className="col-xs-12 col-md-6 col-md-pull-1">
-            <div className="content-right col-xs-12">
-              <div className="card-head">
-                <span className="card-flag">{this.state.data.flagtitle}</span>
-                <a className="card-title" href="#">
-                  <div className="card-content-box">
-                    <h2 className="h1">{this.state.data.title}</h2>
-                    <p className="card-description">{this.state.data.description}</p>
-                  </div>
-                </a>
-              </div>
+        <div className="row">
+          <div className="col-xs-12 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 cardlayout">
+            <div className="col-xs-12 col-md-7 content-left">
+              {this.pictureFillMain()}
             </div>
-            <div className="col-md-offset-2 col-md-10 col-xs-12 hide-sm hide-xs">
-              {this.pictureFill()}
+            <div className="col-xs-12 col-md-6 col-md-pull-1">
+              <div className="content-right col-xs-12">
+                <div className="card-head">
+                  <span className="card-flag">{this.state.data.flagtitle}</span>
+                  <a className="card-title" href="#">
+                    <div className="card-content-box">
+                      <h2 className="h1">{this.state.data.title}</h2>
+                      <p className="card-description">{this.state.data.description}</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div className="col-md-offset-2 col-md-10 col-xs-12 hide-sm hide-xs">
+                {this.pictureFill()}
+              </div>
             </div>
           </div>
         </div>

@@ -8,12 +8,12 @@ class Products extends Component {
     super(props);
     this.state = {
       products: []
-    }
+    };
   }
 
   renderProducts (){
     if (this.state.products && this.state.products.products){
-      console.log(this.state.products.products);
+
       return (  
         this.state.products.products.map(product => {
           return (
@@ -42,43 +42,48 @@ class Products extends Component {
                 </a>
               </article>
             </div>
-          )
+          );
         })
-      )
+      );
     } else {
-      return "";
+      return '';
     }
     
   }
 
   componentDidMount(){
+
     const productList = new Promise( (resolve, reject) => {
       fetch('/public/json/products.json')
-      .then(data => data.json())
-      .then(data => resolve(data))
-      .catch(e => {
-        reject(e);
-      })
+        .then(data => data.json())
+        .then(data => resolve(data))
+        .catch(e => {
+          reject(e);
+        });
     });
+
     productList.then(products => {
-      this.setState({products: products})
-    })
+      this.setState({products: products});
+    });
   }
 
   render(){
-    return(
-       <section className="products-component container">
-          <div className="product-wrapper">
-            <div className="list__header col-xs-12">
+
+    return (
+      <section className="products-component container">
+        <div className="row">
+          <div className="product-wrapper col-xs-12 col-sm-10 col-sm-offset-1 col-xs-offset-0">
+            <div className="list__header">
               <h2>{this.state.products.title}</h2>
               <a href={this.state.products.seeAllHref} className="prod-link">{this.state.products.seeAllLabel}</a>
             </div>
-            <div className="prodict-list">
+            <div className="prodict-list row">
               {this.renderProducts()}
             </div>
           </div>
-       </section>
-    )
+        </div>
+      </section>
+    );
   }
 }
 

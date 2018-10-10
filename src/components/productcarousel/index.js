@@ -56,63 +56,63 @@ export default class ProductCarousel extends Component {
     if (this.state.data.productDetails) {
       console.log(window.innerWidth );
       if (window.innerWidth < 768) {
-        return(
+        return (
           <div className="gallery-item-container c-xs-12">
             <Slider {...this.mobileSettings}>
               {
                 this.state.data.productDetails.map(item => {
   
                   return <div className="card-wrapper" key={item.id}>
-                  <div className="active-img">
-                    <picture>
-                      <source src={item.image} media="(min-width: 768px)"></source>
-                      <img src={item.mobileImage} alt={item.altImage}></img>
-                    </picture>
-                  </div>
-                  <div className="hover-img hide">
-                    <picture>
-                      <source src={item.altImage} media="(min-width: 768px)"></source>
-                      <img src={item.altMobileImage} alt={item.altImage}></img>
-                    </picture>
-                  </div>
-                  <div className="image-desc">
-                    <h2 className="image-title">{item.description}</h2>
-                  </div>
-                </div>;
+                    <div className="active-img">
+                      <picture>
+                        <source src={item.image} media="(min-width: 768px)"></source>
+                        <img src={item.mobileImage} alt={item.altImage}></img>
+                      </picture>
+                    </div>
+                    <div className="hover-img hide">
+                      <picture>
+                        <source src={item.altImage} media="(min-width: 768px)"></source>
+                        <img src={item.altMobileImage} alt={item.altImage}></img>
+                      </picture>
+                    </div>
+                    <div className="image-desc">
+                      <h2 className="image-title">{item.description}</h2>
+                    </div>
+                  </div>;
                 })
               }
             </Slider>
           </div>
-        )
+        );
       } else {
-        return(
+        return (
           <div className="gallery-item-container c-xs-12">
             <Slider {...this.settings}>
               {
                 this.state.data.productDetails.map(item => {
   
                   return <div className="card-wrapper" key={item.id}>
-                  <div className="active-img">
-                    <picture>
-                      <source src={item.image} media="(min-width: 768px)"></source>
-                      <img src={item.mobileImage} alt={item.altImage}></img>
-                    </picture>
-                  </div>
-                  <div className="hover-img hide">
-                    <picture>
-                      <source src={item.altImage} media="(min-width: 768px)"></source>
-                      <img src={item.altMobileImage} alt={item.altImage}></img>
-                    </picture>
-                  </div>
-                  <div className="image-desc">
-                    <h2 className="image-title">{item.description}</h2>
-                  </div>
-                </div>;
+                    <div className="active-img">
+                      <picture>
+                        <source src={item.image} media="(min-width: 768px)"></source>
+                        <img src={item.mobileImage} alt={item.altImage}></img>
+                      </picture>
+                    </div>
+                    <div className="hover-img hide">
+                      <picture>
+                        <source src={item.altImage} media="(min-width: 768px)"></source>
+                        <img src={item.altMobileImage} alt={item.altImage}></img>
+                      </picture>
+                    </div>
+                    <div className="image-desc">
+                      <h2 className="image-title">{item.description}</h2>
+                    </div>
+                  </div>;
                 })
               }
             </Slider>
           </div>
-        )
+        );
       }
     }
   }
@@ -135,7 +135,7 @@ export default class ProductCarousel extends Component {
           </div>
           {this.renderGalleryItems()}
         </div>
-    </section>
-    )
+      </section>
+    );
   }
 }
