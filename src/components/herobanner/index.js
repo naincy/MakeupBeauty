@@ -1,10 +1,8 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import Picturefill  from '../../globals/js/picturefill';
 import CTA from '../../globals/js/cta';
 
 import './css/index.scss';
-
-
 
 export default class Herobanner extends Component{
   constructor(props){
@@ -44,11 +42,15 @@ export default class Herobanner extends Component{
 
     return (
       <section className="container herobanner">
-        {this.pictureFill()}
-        <div className="content col-xs-6">
-          <h1 className="large">{this.state.data.title}</h1>
-          <p className="descroption">{this.state.data.description}</p>
-          <CTA data={this.state.data.cta} />
+        <div className="row">
+          <div className="col-xs-12">
+            {this.pictureFill()}
+            <div className="content col-xs-6">
+              <h1 className="large">{this.state.data.title}</h1>
+              <p className="descroption">{this.state.data.description}</p>
+              <CTA data={this.state.data.cta} />
+            </div>
+          </div>
         </div>
       </section>
     );

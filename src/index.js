@@ -7,6 +7,8 @@ import './globals/css/common.scss';
 import Header from './components/header/index';
 import Footer from './components/footer/index';
 import Herobanner from './components/herobanner/index';
+import Contenttile from './components/contenttile/index';
+import TrendingNow from './components/trendingnow';
 import Products from './components/products/index';
 
 export default class App  extends Component{
@@ -15,6 +17,8 @@ export default class App  extends Component{
       <Fragment>
         <Header />
         <Herobanner />
+        <Contenttile />
+        <TrendingNow />
         <Products />
         <Footer />
       </Fragment>
